@@ -60,8 +60,9 @@
   slider.addEventListener('mousemove', (e) => {
     if (!isDown) return;  // stop the function from running
     e.preventDefault();
-    console.count(isDown);
-    console.log(startX)
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX)
+    console.log(walk);
   });
 </script>
 
